@@ -34,7 +34,7 @@
 				<a href="#" class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">접속하기<span class="caret"></span></a>
-					<ul class="drowdown-menu">
+					<ul class="dropdown-menu">
 						<li class="active"><a href="login.jsp">로그인</a></li><!-- active=현재 홈페이지를 의미 -->
 						<li><a href="join.jsp">회원가입</a></li>
 					</ul>
@@ -56,6 +56,7 @@
 		</div>
 		<input type="submit" class="btn btn-primary form-control" value="로그인">
 				</form>
+	</div>
 	</div>
 	<div class="col-lg-4"></div>
 </div>

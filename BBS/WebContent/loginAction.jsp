@@ -15,6 +15,20 @@
 </head>
 <body>
 <% 
+	// 로그인과 회원가입 페이지에 들어갈 수 없게
+	String userID = null;
+	if(session.getAttribute("userID") != null){
+		userID = (String) session.getAttribute("userID");
+	}
+	if(userID != null) {
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("alert('이미 로그인이 되었습니다.')");
+		script.println("location.href = 'main.jsp'"); 
+		script.println("</script>");
+		
+	}
+	
 	UserDAO userDAO = new UserDAO();
 	int result = userDAO.login(user.getUserID(), user.getUserPassword());
 	

@@ -18,6 +18,21 @@
 </head>
 <body>
 <% 
+	// 로그인과 회원가입 페이지에 들어갈 수 없게
+	String userID = null;
+	if(session.getAttribute("userID") != null){
+		userID = (String) session.getAttribute("userID");
+	}
+	if(userID != null) {
+		
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("alert('이미 로그인이 되었습니다.')");
+		script.println("location.href = 'main.jsp'"); 
+		script.println("</script>");
+		
+	}
+
 	// join.jsp 에서 넘어올 때 null 값이 있었는지 확인
 	if(user.getUserID() == null || user.getUserPassword() == null || user.getUserName() == null
 	|| user.getUserGender() == null || user.getUserEmail() == null) {
