@@ -34,7 +34,7 @@
 	
 	// DAO login 함수의 return 값 비교
 	if(result == 1){  // 로그인 성공
-		session.setAttribute("userID", user.getUserPassword()); // 유저에서 세션 값 부여.
+		session.setAttribute("userID", user.getUserID()); // 유저에서 세션 값 부여.
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("location.href = 'main.jsp'");
