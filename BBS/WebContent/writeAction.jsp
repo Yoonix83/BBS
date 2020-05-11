@@ -44,7 +44,7 @@
 		
 		// 사용자 게시글 입력 실패 & 성공
 		BbsDAO bbsDAO = new BbsDAO();
-		int result = bbsDAO.write(bbs.getBbsTitle(), userID, bbs.getBbsContent()); // Bbs 컨테이너에 등록된 값들을 DB에 실제 등록하는 작업
+		int result = bbsDAO.write(bbs.getBbsTitle(), userID, bbs.getBbsContent()); 
 		
 		if(result == -1){  // 실패
 				

@@ -107,9 +107,14 @@
 					<tr>
 						<td><%= list.get(i).getBbsID() %></td>
 						<!-- crossSite 공격방지를 위한 특문 처리 -->
-						<td><a href="view.jsp?bbsID=<%=list.get(i).getBbsID()%>"><%= list.get(i).getBbsTitle().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">","&gt;").replaceAll("\n",  "<br>")  %></a></td>
+						<td><a href="view.jsp?bbsID=<%=list.get(i).getBbsID()%>">
+						<%= list.get(i).getBbsTitle().replaceAll(" ", "&nbsp;")
+						.replaceAll("<", "&lt;").replaceAll(">","&gt;")
+						.replaceAll("\n",  "<br>")  %></a></td>
 						<td><%= list.get(i).getUserID() %></td>
-						<td><%= list.get(i).getBbsDate().substring(0,11) + list.get(i).getBbsDate().substring(11,13)+"시"+list.get(i).getBbsDate().substring(14,16)+"분" %></td>
+						<td><%= list.get(i).getBbsDate().substring(0,11) 
+						+ list.get(i).getBbsDate().substring(11,13)+"시"
+								+list.get(i).getBbsDate().substring(14,16)+"분" %></td>
 					</tr>
 					
 				<%
@@ -118,9 +123,9 @@
 				</tbody>
 			</table>
 			<!-- 페이징 처리 -->
-			<%
-				if(pageNumber != 1) { // 26 line 에 pageNumber 기본 값 1 , pageNumber 가 1보다 이하 값은 나올 수 없기 때문에 2페이지 부터 -1이 적용되 이전페이지 버튼이 나온다.
-					
+			<% // 32 line 에 pageNumber 기본 값 1 , pageNumber 가 1보다 이하 값은 나올 수 없기 때문에 2페이지 부터 -1이 적용되 이전페이지 버튼이 나온다.
+			
+				if(pageNumber != 1) { 
 			%>
 				<a href = "bbs.jsp?pageNumber=<%=pageNumber - 1 %>" class="btn btn-success btn-arraw-left">이전</a>
 				

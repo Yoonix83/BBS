@@ -41,6 +41,7 @@
 		script.println("</script>");
 		
 	}
+	
 	Bbs bbs = new BbsDAO().getBbs(bbsID);
 	
 	// 접속된 세션 아이디와 게시판 유저 아이디 비교
