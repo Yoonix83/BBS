@@ -13,4 +13,4 @@ DB : MySQL
 
 + 현재 1.0 버전 완료
 
-> bbs.sql : MYSQL DATA 추출본
+> - bbs.sql : MYSQL DATA 추출본
