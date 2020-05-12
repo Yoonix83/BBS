@@ -12,3 +12,5 @@ DB : MySQL
 기타 : Bootstrap
 
 + 현재 1.0 버전 완료
+
+bbs.sql : MYSQL DATA 추출본
